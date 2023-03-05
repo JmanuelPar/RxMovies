@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">RxMovies</string>
+    <string name="error_result_message">Oh Nooo, nous avons une erreur : \n%s</string>
+    <string name="error_result_message_retry">Oh Nooo, nous avons une erreur : \n%s\n\nVeuillez réessayez ultérieurement</string>
+    <string name="error_result_message_unknown">Oh Nooo, nous avons une erreur inconnue</string>
+    <string name="error_result_message_unknown_retry">Oh Nooo, nous avons une erreur inconnue\n\nVeuillez réessayez ultérieurement</string>
+    <string name="movie_image">Movie image</string>
+    <string name="movie_release_date_example">8 juillet 2022</string>
+    <string name="movie_title_example">Un titre d\'un film</string>
+    <string name="no_connect_message">Il semblerait que vous êtes hors-connexion\n\nVeuillez vérifier votre accès à Internet</string>
+    <string name="no_movie">Aucun film</string>
+    <string name="not_rated">NR</string>
+    <string name="not_specified">Non renseigné</string>
+    <string name="popular_movies">Films populaires</string>
+    <string name="retry">Réessayer</string>
+    <string name="time_out">Timeout</string>
+</resources>
