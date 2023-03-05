@@ -48,7 +48,6 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         val mRvMovies = binding.rvMovies
         movieAdapter = MovieAdapter()
-        val headerAdapter = MovieLoadStateAdapter { movieAdapter.retry() }
         val footerAdapter = MovieLoadStateAdapter { movieAdapter.retry() }
 
         mRvMovies.apply {
@@ -56,17 +55,13 @@ class MainActivity : AppCompatActivity() {
                 spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
                     override fun getSpanSize(position: Int): Int {
                         return when {
-                            position == 0 && headerAdapter.itemCount > 0 -> 2
                             position == movieAdapter.itemCount && footerAdapter.itemCount > 0 -> 2
                             else -> 1
                         }
                     }
                 }
             }
-            adapter = movieAdapter.withLoadStateHeaderAndFooter(
-                header = headerAdapter,
-                footer = footerAdapter
-            )
+            adapter = movieAdapter.withLoadStateFooter(footer = footerAdapter)
             setHasFixedSize(true)
         }
 
