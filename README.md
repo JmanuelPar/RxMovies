@@ -10,7 +10,6 @@ Data Binding
 Material design  
 Moshi  
 MVVM  
-Paging 3  
 RecyclerView  
 Retrofit2  
 RxJava2  

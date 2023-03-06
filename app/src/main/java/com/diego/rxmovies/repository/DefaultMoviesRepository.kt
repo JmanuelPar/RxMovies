@@ -6,5 +6,5 @@ class DefaultMoviesRepository(
     private val moviesRemoteDataSource: MoviesDataSource
 ) : MoviesRepository {
 
-    override fun getMovies() = moviesRemoteDataSource.getMovies()
+    override fun getMovies(page: Int) = moviesRemoteDataSource.getMovies(page)
 }

@@ -1,10 +1,9 @@
 package com.diego.rxmovies.data.source
 
-import androidx.paging.PagingData
-import com.diego.rxmovies.data.model.Movie
-import io.reactivex.Flowable
+import com.diego.rxmovies.data.model.NetworkMovies
+import io.reactivex.Observable
 
 interface MoviesDataSource {
 
-    fun getMovies(): Flowable<PagingData<Movie>>
+    fun getMovies(page: Int): Observable<NetworkMovies>
 }

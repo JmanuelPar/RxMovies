@@ -4,7 +4,7 @@ import com.diego.rxmovies.data.model.NetworkMovies
 import com.diego.rxmovies.utils.Constants.API_TMDB_URL
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import io.reactivex.Single
+import io.reactivex.Observable
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -41,7 +41,7 @@ interface TmdbApiService {
         @Query("api_key") apiKey: String,
         @Query("page") page: Int,
         @Query("language") language: String
-    ): Single<NetworkMovies>
+    ): Observable<NetworkMovies>
 }
 
 object TmdbApi {
